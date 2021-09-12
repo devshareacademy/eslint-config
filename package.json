@@ -1,26 +1,26 @@
 {
   "name": "@scottwestover/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared eslint config for my projects",
   "main": "index.js",
   "scripts": {
-		"package-publish": "npm publish --registry https://npm.pkg.github.com/"
-	},
+    "package-publish": "npm publish --registry https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scottwestover/eslint-config.git"
   },
   "publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
   "author": {
-		"name": "Scott Westover",
-		"email": "scottwestover2006@gmail.com"
-	},
+    "name": "Scott Westover",
+    "email": "scottwestover2006@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/scottwestover/eslint-config/issues"
@@ -28,10 +28,10 @@
   "homepage": "https://github.com/scottwestover/eslint-config#readme",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": ">=4.28.5",
-		"@typescript-eslint/parser": ">=4.28.5",
-		"eslint": ">=7.32.0",
-		"eslint-config-prettier": ">=8.3.0",
-		"eslint-plugin-prettier": ">=4.0.0",
-		"prettier": ">=2.3.2"
+    "@typescript-eslint/parser": ">=4.28.5",
+    "eslint": ">=7.32.0",
+    "eslint-config-prettier": ">=8.3.0",
+    "eslint-plugin-prettier": ">=4.0.0",
+    "prettier": ">=2.3.2"
   }
 }

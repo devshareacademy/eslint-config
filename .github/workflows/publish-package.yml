@@ -21,26 +21,17 @@ jobs:
         with:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
-          scope: "@devshareacademy"
 
-      # - run: git config user.email "scottwestover2006@gmail.com"
-      # - run: git config user.name "@github-ci"
-      # - run: yarn version --patch --message "Bump version to %s"
+      - run: git config user.email "scottwestover2006@gmail.com"
+      - run: git config user.name "@github-ci"
+      - run: yarn version --patch --message "Bump version to %s"
 
-      # - run: git push
-      # - run: git push --follow-tags
+      - run: git push
+      - run: git push --follow-tags
 
       - name: publish
         run: |
-          npm -v
-          npm publish --access public
+          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm publish --ignore-scripts
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-
-      # - name: publish
-      #   uses: JS-DevTools/npm-publish@v1
-      #   with:
-      #     token: ${{ secrets.NPM_TOKEN }}
-      #     access: "public"

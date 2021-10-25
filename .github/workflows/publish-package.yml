@@ -28,9 +28,16 @@ jobs:
       # - run: git push
       # - run: git push --follow-tags
 
+      # - name: publish
+      #   run: |
+      #     npm config set //registry.npmjs.org:_authToken ${NODE_AUTH_TOKEN}
+      #     npm publish --access public --ignore-scripts
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
       - name: publish
-        run: |
-          npm config set //registry.npmjs.org:_authToken ${NODE_AUTH_TOKEN}
-          npm publish --access public --ignore-scripts
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: "public"

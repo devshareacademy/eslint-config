@@ -26,7 +26,9 @@ jobs:
       # - run: git push --follow-tags
 
       - name: publish
-        run: npm publish --access public --ignore-scripts
+        run: |
+          npm -v
+          npm publish --access public --ignore-scripts
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 

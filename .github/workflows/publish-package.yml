@@ -17,9 +17,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}s
 
       # - run: git config user.email "scottwestover2006@gmail.com"
       # - run: git config user.name "@github-ci"
@@ -28,16 +25,14 @@ jobs:
       # - run: git push
       # - run: git push --follow-tags
 
-      # - name: publish
-      #   run: |
-      #     npm config set //registry.npmjs.org:_authToken ${NODE_AUTH_TOKEN}
-      #     npm publish --access public --ignore-scripts
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-
       - name: publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          access: "public"
+        run: npm publish --access public --ignore-scripts
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
+      # - name: publish
+      #   uses: JS-DevTools/npm-publish@v1
+      #   with:
+      #     token: ${{ secrets.NPM_TOKEN }}
+      #     access: "public"

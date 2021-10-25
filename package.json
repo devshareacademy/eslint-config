@@ -1,6 +1,6 @@
 {
   "name": "@swestover/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Shared eslint config for my projects",
   "main": "index.js",
   "scripts": {

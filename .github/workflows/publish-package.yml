@@ -18,13 +18,15 @@ jobs:
         with:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}s
 
-      - run: git config user.email "scottwestover2006@gmail.com"
-      - run: git config user.name "@github-ci"
-      - run: yarn version --patch --message "Bump version to %s"
+      # - run: git config user.email "scottwestover2006@gmail.com"
+      # - run: git config user.name "@github-ci"
+      # - run: yarn version --patch --message "Bump version to %s"
 
-      - run: git push
-      - run: git push --follow-tags
+      # - run: git push
+      # - run: git push --follow-tags
 
       - name: publish
         run: |

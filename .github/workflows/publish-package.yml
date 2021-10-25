@@ -33,7 +33,6 @@ jobs:
       - name: publish
         run: |
           npm -v
-          npm login
           npm publish --access public
           cat .npmrc
         env:

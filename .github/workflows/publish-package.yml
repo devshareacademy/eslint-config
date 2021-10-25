@@ -1,4 +1,4 @@
-name: Publish GitHub NPM Package
+name: Publish NPM Package
 
 on:
   workflow_dispatch:
@@ -17,6 +17,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "16.x"
+          registry-url: https://registry.npmjs.org/
 
       - name: Install yarn
         run: npm install --global yarn

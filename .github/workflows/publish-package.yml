@@ -33,7 +33,9 @@ jobs:
       - name: publish
         run: |
           npm -v
+          npm login
           npm publish --access public
+          cat .npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -32,8 +32,8 @@ yarn add -D -E eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ## Publish New Version
 
 ```bash
-# Authenticate with GitHub NPM Package Registry
-npm login --scope=@scottwestover --registry=https://npm.pkg.github.com
+# Authenticate with NPM Package Registry
+npm login
 
 # Run publish script
 yarn package-publish
@@ -43,6 +43,6 @@ yarn package-publish
 
 ## Shared Configurations
 
-- @scottwestover/eslint-config: [eslint-config](https://github.com/scottwestover/eslint-config)
-- @scottwestover/tsconfig: [tsconfig](https://github.com/scottwestover/tsconfig)
-- @scottwestover/prettier-config: [prettier-config](https://github.com/scottwestover/prettier-config)
+- @swestover/eslint-config: [eslint-config](https://github.com/scottwestover/eslint-config)
+- @swestover/tsconfig: [tsconfig](https://github.com/scottwestover/tsconfig)
+- @swestover/prettier-config: [prettier-config](https://github.com/scottwestover/prettier-config)

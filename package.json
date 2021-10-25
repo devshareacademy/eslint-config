@@ -1,17 +1,17 @@
 {
-  "name": "@scottwestover/eslint-config",
+  "name": "@swestover/eslint-config",
   "version": "0.0.2",
   "description": "Shared eslint config for my projects",
   "main": "index.js",
   "scripts": {
-    "package-publish": "npm publish --registry https://npm.pkg.github.com/"
+    "package-publish": "npm publish --registry https://registry.npmjs.org/ --access public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scottwestover/eslint-config.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "eslint",

@@ -36,7 +36,8 @@ yarn add -D -E eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser
 npm login
 
 # Run publish script
-yarn package-publish
+yarn publish:npm
+yarn publish:github
 ```
 
 ---

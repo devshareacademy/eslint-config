@@ -4,7 +4,8 @@
   "description": "Shared eslint config for my projects",
   "main": "index.js",
   "scripts": {
-    "package-publish": "npm publish --registry https://registry.npmjs.org/ --access public"
+    "publish:npm": "npm publish --registry https://registry.npmjs.org/ --access public",
+    "publish:github": "npm publish --registry https://rnpm.pkg.github.com/"
   },
   "repository": {
     "type": "git",

@@ -21,19 +21,19 @@ jobs:
         with:
           node-version: "16.x"
 
-      - run: git config user.email "scottwestover2006@gmail.com"
-      - run: git config user.name "@github-ci"
-      - run: yarn version --patch --message "Bump version to %s"
+      # - run: git config user.email "scottwestover2006@gmail.com"
+      # - run: git config user.name "@github-ci"
+      # - run: yarn version --patch --message "Bump version to %s"
 
-      - run: git push
-      - run: git push --follow-tags
+      # - run: git push
+      # - run: git push --follow-tags
 
-      - name: publish to npm
-        run: |
-          npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          npm run publish:npm
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: publish to npm
+      #   run: |
+      #     npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+      #     npm run publish:npm
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: publish to github
         run: |

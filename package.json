@@ -11,9 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/devshareacademy/eslint-config.git"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "keywords": [
     "eslint",
     "eslintconfig"
